@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.classy.survivegame">
+
+    <!-- Only the permissions *your* app actually needs -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.SurviveGame"
+        tools:replace="android:label,android:icon,android:roundIcon"
+        tools:remove="android:appComponentFactory">
+
+        <activity
+            android:name=".Activity_Game"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_Menu"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
